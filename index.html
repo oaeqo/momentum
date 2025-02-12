@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOMENTUM</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <p class="hidden">Hello.</p>
+  <button class="logout hidden">로그아웃</button>
+  <form id="loginForm">
+    <input type="text" placeholder="로그인 이름을 입력하세요" required>
+    <button class="login">로그인</button>
+  </form>
+  <h3>오늘의 명언</h3>
+  <p class="quote">
+    <span></span>
+    <span></span>
+  </p>
+  <h1 class="clock">00:00:00</h1>
+  <button class="mode">테마 모드</button>
+  <form id="todoForm" >
+    <input type="text" placeholder="할일을 입력하세요" required>
+  </form>
+  <ul id="todoList"></ul>
+  <script src="./script/login.js"></script>
+  <script src="./script/quote.js"></script>
+  <script src="./script/clock.js"></script>
+  <script src="./script/mode.js"></script>
+  <script src="./script/todolist.js"></script>
+  <script src="./script/wheather.js"></script>
+</body>
+</html>
