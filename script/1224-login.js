@@ -1,6 +1,6 @@
 const loginForm = document.querySelector("#loginForm");
-const inputElem = document.querySelector('input');
-const pElem = document.querySelector("p");
+const inputElem = document.querySelector(".enter > #loginForm > input");
+const pElem = document.querySelector(".login>.login-done>p");
 const outElem = document.querySelector(".logout");
 const LOGIN_KEY = "loginname";
 const saveLoginName = (strInput) => {
@@ -10,7 +10,7 @@ const loadLoginName = () => {
   return localStorage.getItem(LOGIN_KEY);
 }
 const printLoginName = (strName)=>{
-  pElem.textContent = `hello. ${strName}`;
+  pElem.textContent = `안녕하세요, ${strName}님.`;
   pElem.classList.remove("hidden");
   outElem.classList.remove("hidden");
   loginForm.classList.add("hidden");
@@ -36,7 +36,7 @@ const init = () => {
   let loginName = loadLoginName();
   // console.log( loginName );
   if ( loginName ) {
-    //화면에 출력
+    //화면에 출력 
     printLoginName(loginName);
   } else {
     loginForm.addEventListener("submit", handlerSubmit );

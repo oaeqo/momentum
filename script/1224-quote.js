@@ -24,14 +24,15 @@ const quotes = [
 
 //랜덤 : Math.random(): 0~1사이의 값으로 출력. (실수) *0~9까지 출력: *10, 100까지 출력: *100, 배열이면 Math.floor(숫자버림)(Math.random() * 배열.length)
 const num = Math.floor(Math.random() * quotes.length);
-// console.log(num);
+console.log(num);
 
 
-const today = quotes[0];
-console.log( today.quote ); 
+const today = quotes[num];
+// console.log( today.quote ); 
 
 //객체 가져오기
 const quoteElem = document.querySelector(".quote > span:nth-of-type(1)");
 quoteElem.textContent = today.quote;
 const authorElem = document.querySelector(".quote > span:nth-of-type(2)");
-authorElem.textContent = today.author;
+authorElem.textContent = ` - ${today.author}`;
+
